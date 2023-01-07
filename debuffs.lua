@@ -120,6 +120,10 @@ local function ApplyDebuff(target, effect, spell, actor, type, param)
 end
 
 local function HandleAction(act)
+
+    if #act.targets == 0 then return end
+    if #act.targets[1].actions == 0 then return end
+
     local message = act.targets[1].actions[1].message
 
     if not ActionIsLocal(act.actor_id) then return end
