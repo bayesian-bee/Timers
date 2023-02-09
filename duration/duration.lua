@@ -38,13 +38,14 @@ require('duration.ninjutsu')(SpellCalculators);
 require('duration.songs')(SpellCalculators);
 require('duration.weaponskills')(WeaponSkillCalculators);
 require('duration.abilities')(AbilityCalculators);
+require('duration.petactions')(PetAbilityCalculators);
 
 local exports = {};
 
 exports.GetAbilityDuration = function(Id, targetId)
     local calculator =AbilityCalculators[Id];
     if calculator ~= nil then
-        return calculator(targetId);
+        return calculator(targetId) * 1000;
     else
         return nil;
     end
@@ -53,7 +54,7 @@ end
 exports.GetMobAbilityDuration = function(Id, targetId)
     local calculator = MobAbilityCalculators[Id];
     if calculator ~= nil then
-        return calculator(targetId);
+        return calculator(targetId) * 1000;
     else
         return nil;
     end
@@ -62,7 +63,7 @@ end
 exports.GetPetAbilityDuration = function(Id, targetId)
     local calculator = PetAbilityCalculators[Id];
     if calculator ~= nil then
-        return calculator(targetId);
+        return calculator(targetId) * 1000;
     else
         return nil;
     end
@@ -71,7 +72,7 @@ end
 exports.GetSpellDuration = function(Id, targetId)
     local calculator = SpellCalculators[Id];
     if calculator ~= nil then
-        return calculator(targetId);
+        return calculator(targetId) * 1000;
     else
         return nil;
     end

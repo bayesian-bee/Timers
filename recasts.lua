@@ -144,8 +144,7 @@ local function ProcessReady(timer)
     local readyId = 0x66;
     local reduction = GetMemoryMod(readyId);
     
-    --Multiplying by 60 to get the same format as timer is stored in.
-    local baseRecast = 60 * (90 + reduction);
+    local baseRecast = (90 + reduction);
     
     --Charges are treated as evenly divided between remaining recast by the server.
     local chargeValue = baseRecast / 3;
@@ -162,8 +161,7 @@ local function ProcessQuickDraw(timer)
     local quickDrawId = 0xC3;
     local reduction = GetMemoryMod(quickDrawId);
 
-    --Multiplying by 60 to get the same format as timer is stored in.
-    local baseRecast = 60 * (120 + reduction);
+    local baseRecast = (120 + reduction);
 
     --Charges are treated as evenly divided between remaining recast by the server.
     local chargeValue = baseRecast / 2;
@@ -225,7 +223,9 @@ local function UpdateRecasts(timers)
     local mmRecast  = AshitaCore:GetMemoryManager():GetRecast()
     for i = 0,31 do
         local id = mmRecast:GetAbilityTimerId(i)
-        local timer = mmRecast:GetAbilityTimer(i)
+		
+		-- 100/6 converts our timers into real people miliseconds instead of 1/60 ticks
+        local timer = mmRecast:GetAbilityTimer(i) * 100/6 
         if ((id ~= 0 or i == 0) and timer > 0 and (AbilityBlocks:contains(id) == false)) then
             local abil = {}
             if id == 0xC3 then -- Quick Draw
@@ -255,7 +255,7 @@ local function UpdateRecasts(timers)
 
     local swapSpells = {};
     for i = 0, 1024 do
-        local timer = mmRecast:GetSpellTimer(i);
+        local timer = mmRecast:GetSpellTimer(i) * 100/6;
 
         if (timer > 0) then
             local spell = {}

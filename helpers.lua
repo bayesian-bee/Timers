@@ -138,7 +138,8 @@ module.buff_duration = function(raw_duration)
         return 0;
     end
 
-    --Convert to seconds
+    --Convert to real world miliseconds
+	real_duration = real_duration * (100.0/6.0);
     return real_duration;
 end
 
