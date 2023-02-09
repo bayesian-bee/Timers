@@ -72,7 +72,7 @@ local function FillAbilityTable(abilityTable)
     end
 
     --Ecliptic Howl
-    abilityTable[0] = function(targetId)
+    abilityTable[844] = function(targetId)
         return CalculateBloodPactDuration(180);
     end
 

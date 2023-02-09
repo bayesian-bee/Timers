@@ -90,7 +90,7 @@ local PetActionMap = T{
     [0] = 532, --Ecliptic Growl
     [0] = 533, --Ecliptic Howl
     [0] = 538, --Heavenward Howl
-    [0] = 548, --Crimson Howl
+    [844] = 548, --Crimson Howl
     [0] = 553, --Inferno Howl
     [0] = 554, --Conflag Strike
     [0] = 560, --Rock Throw
@@ -413,7 +413,7 @@ local function ApplyBuff(target, effect, spell, actor, type)
 
     local resMan = AshitaCore:GetResourceManager()
 	
-	print(('ApplyBuff: Target:%d, Effect:%d, Spell:%d, Actor:%d, Type:%d'):fmt(target, effect, spell, actor, type));
+	--print(('ApplyBuff: Target:%d, Effect:%d, Spell:%d, Actor:%d, Type:%d'):fmt(target, effect, spell, actor, type));
 
     -- Create timer
     local duration = nil
@@ -498,7 +498,7 @@ local function HandleAction(act)
 		return 
 	end
 
-	print(('Timers: Accepted Spell Cast:[%d] || Effect:[%d] || Param:[%d] || Target:[%d] || Actor:[%d] || Type:[%d]'):fmt(spell,effect,param, target, actor, type))
+	--print(('Timers: Accepted Spell Cast:[%d] || Effect:[%d] || Param:[%d] || Target:[%d] || Actor:[%d] || Type:[%d]'):fmt(spell,effect,param, target, actor, type))
 	
     if not BlockedSpells:hasval(spell) and (AbilityMsgs:haskey(message) or SpellMsgs:haskey(message) or PetMsgs:haskey(message)) then
         --print(('Timers: Known message: Message:%d, Spell:%d, Type:%d, Effect:%d, Param:%d'):fmt(message, spell, type, effect, param))
@@ -722,6 +722,13 @@ local function UpdateBuffs(timers)
 
                 local time_active = (ashita.time.clock()['ms'] - effect_info.o_time)
 				local time_remaining = ((effect_info.duration) - time_active);
+				
+				if(effect_info.duration >= 0 and time_remaining <= -5) then
+					-- Catch case for situations where we've missed all relevant packets for buffs expiring.
+					-- At this point, mark the timer as toast and let the user deal with it.
+					RemoveBuff(effect_target, effect_id);
+					
+				end
 				
 				-- Expired buffs
 				local render = true;
