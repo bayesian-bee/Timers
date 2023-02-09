@@ -312,7 +312,6 @@ local function RemoveBuff(character, target_effect_id)
     local char_buffs = buffsByCharacter[character]
 	
     if not char_buffs then return false end
-	print("rev");
 
 	--print(('Timers: RemoveBuff(Character:[%d],Effect:[%d]) Called'):fmt(character, target_effect_id));
 	
@@ -725,8 +724,7 @@ local function UpdateBuffs(timers)
                 local time_active = (ashita.time.clock()['ms'] - effect_info.o_time)
 				local time_remaining = ((effect_info.duration) - time_active);
 				
-				print(effect_info.duration .. ' || ' .. time_remaining);
-				if(effect_info.duration >= 0 and time_remaining <= -5) then
+				if(effect_info.duration >= 0 and time_remaining <= -5000) then
 					-- Catch case for situations where we've missed all relevant packets for buffs expiring.
 					-- At this point, mark the timer as toast and let the user deal with it.
 					RemoveBuff(effect_target.ServerId, effect_id);
