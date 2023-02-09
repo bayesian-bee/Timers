@@ -18,10 +18,10 @@
 --]]
 
 addon.name      = 'Timers';
-addon.author    = 'Shiyo, The Mystic';
-addon.version   = '1.0.2.1';
-addon.desc      = 'Displays the duration of spells and abilities you\'ve used';
-addon.link      = 'https://github.com/lenonk/Timers';
+addon.author    = 'Lunaretic, Shiyo, The Mystic';
+addon.version   = '1.0.3.0';
+addon.desc      = 'Displays the duration of spells and abilities you\'ve used.  Updated and Modified for Horizon Private Server usage.';
+addon.link      = 'https://github.com/Lunaretic/Timers';
 
 require('common');
 require('ffi')
