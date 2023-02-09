@@ -727,7 +727,9 @@ local function UpdateBuffs(timers)
 				if(effect_info.duration >= 0 and time_remaining <= -5000) then
 					-- Catch case for situations where we've missed all relevant packets for buffs expiring.
 					-- At this point, mark the timer as toast and let the user deal with it.
-					RemoveBuff(effect_target.ServerId, effect_id);
+					if(effect_target ~= nil) then 
+						RemoveBuff(effect_target.ServerId, effect_id);
+					end
 					
 				end
 				
