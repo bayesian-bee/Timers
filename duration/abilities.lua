@@ -399,7 +399,7 @@ local function FillAbilityTable(abilityTable)
             end
         end
         duration = duration + gData.EquipSum(additiveModifiers);
-        return nil;
+        return duration;
     end
 
     --Warding Circle
