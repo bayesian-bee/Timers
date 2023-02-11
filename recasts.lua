@@ -144,7 +144,7 @@ local function ProcessReady(timer)
     local readyId = 0x66;
     local reduction = GetMemoryMod(readyId);
     
-    local baseRecast = (90 + reduction);
+    local baseRecast = 60 * (90 + reduction);
     
     --Charges are treated as evenly divided between remaining recast by the server.
     local chargeValue = baseRecast / 3;
@@ -161,7 +161,7 @@ local function ProcessQuickDraw(timer)
     local quickDrawId = 0xC3;
     local reduction = GetMemoryMod(quickDrawId);
 
-    local baseRecast = (120 + reduction);
+    local baseRecast = 60 *(120 + reduction);
 
     --Charges are treated as evenly divided between remaining recast by the server.
     local chargeValue = baseRecast / 2;
