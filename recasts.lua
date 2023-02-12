@@ -144,7 +144,7 @@ local function ProcessReady(timer)
     local readyId = 0x66;
     local reduction = GetMemoryMod(readyId);
     
-    local baseRecast = 60 * (45 + reduction);
+    local baseRecast = 60 * ((45 * 3) + reduction);
     
     --Charges are treated as evenly divided between remaining recast by the server.
     local chargeValue = baseRecast / 3;
