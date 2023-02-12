@@ -153,7 +153,7 @@ local function ProcessReady(timer)
     local remainingCharges = math.floor((baseRecast - timer) / chargeValue);
     local timeUntilNextCharge = math.fmod(timer, chargeValue);
 
-    return ('Ready [%d]'):fmt(remainingCharges), timeUntilNextCharge
+    return ('Ready [%d]'):fmt(remainingCharges), timeUntilNextCharge * 100/6
 end
 
 local function ProcessQuickDraw(timer)
@@ -170,7 +170,7 @@ local function ProcessQuickDraw(timer)
     local remainingCharges = math.floor((baseRecast - timer) / chargeValue);
     local timeUntilNextCharge = math.fmod(timer, chargeValue);
 
-    return ('Quick Draw [%d]'):fmt(remainingCharges), timeUntilNextCharge
+    return ('Quick Draw [%d]'):fmt(remainingCharges),  timeUntilNextCharge * 100/6
 end
 
 local function ProcessStratagems(timer)
