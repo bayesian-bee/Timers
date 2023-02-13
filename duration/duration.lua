@@ -44,7 +44,7 @@ local exports = {};
 
 exports.GetAbilityDuration = function(Id, targetId)
     local calculator =AbilityCalculators[Id];
-    if calculator ~= nil then
+    if calculator ~= nil and calculator(targetId) ~= nil  then
         return calculator(targetId) * 1000;
     else
         return nil;
@@ -53,7 +53,7 @@ end
 
 exports.GetMobAbilityDuration = function(Id, targetId)
     local calculator = MobAbilityCalculators[Id];
-    if calculator ~= nil then
+    if calculator ~= nil and calculator(targetId) ~= nil  then
         return calculator(targetId) * 1000;
     else
         return nil;
@@ -62,7 +62,7 @@ end
 
 exports.GetPetAbilityDuration = function(Id, targetId)
     local calculator = PetAbilityCalculators[Id];
-    if calculator ~= nil then
+    if calculator ~= nil and calculator(targetId) ~= nil then
         return calculator(targetId) * 1000;
     else
         return nil;
@@ -71,7 +71,7 @@ end
 
 exports.GetSpellDuration = function(Id, targetId)
     local calculator = SpellCalculators[Id];
-    if calculator ~= nil then
+    if calculator ~= nil and calculator(targetId) ~= nil  then
         return calculator(targetId) * 1000;
     else
         return nil;

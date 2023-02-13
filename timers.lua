@@ -19,7 +19,7 @@
 
 addon.name      = 'Timers';
 addon.author    = 'Lunaretic, Shiyo, The Mystic';
-addon.version   = '1.0.3.2';
+addon.version   = '1.0.3.3';
 addon.desc      = 'Displays the duration of spells and abilities you\'ve used.  Updated and Modified for Horizon Private Server usage.';
 addon.link      = 'https://github.com/Lunaretic/Timers';
 
