@@ -24,3 +24,8 @@ It is completely configurable allowing the user to customize colors, sizes, whet
 - Icon Options
 
 ![](https://user-images.githubusercontent.com/1181733/151686053-96601efb-fb10-4949-aa4d-22cc76dbc82b.png)
+
+
+### Devlog
+
+1.3.4 [Bee] - now shows debuffs applied by members of the alliance

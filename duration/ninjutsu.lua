@@ -46,40 +46,31 @@ local function FillSpellTable(spellTable)
 		return 120;
 	end
 
-    --[[UNKNOWN
+
 	--Jubaku: Ichi
 	spellTable[341] = function(targetId)
-		return 0;
+		return 60*5;
 	end
-    ]]--
 
-    --[[UNKNOWN
 	--Hojo: Ichi
 	spellTable[344] = function(targetId)
-		return 0;
+		return 60*5;
 	end
-    ]]--
 
-    --[[UNKNOWN
 	--Hojo: Ni
 	spellTable[345] = function(targetId)
-		return 0;
+		return 60*5;
 	end
-    ]]--
 
-    --[[UNKNOWN
 	--Kurayami: Ichi
 	spellTable[347] = function(targetId)
-		return 0;
+		return 60*5;
 	end
-    ]]--
 
-    --[[UNKNOWN
 	--Kurayami: Ni
 	spellTable[348] = function(targetId)
-		return 0;
+		return 60*5;
 	end
-    ]]--
 
     --[[UNKNOWN
 	--Dokumori: Ichi

@@ -111,6 +111,11 @@ local function FillSpellTable(spellTable)
     spellTable[856] = function(targetId)
         return 180;
     end
+
+    --Stun
+    spellTable[252] = function(targetId)
+        return 5
+    end
 end
 
 return FillSpellTable;

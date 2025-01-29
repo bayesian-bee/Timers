@@ -273,12 +273,10 @@ local function FillSpellTable(spellTable)
 		return CalculateEnfeeblingDuration(30, targetId);
 	end
 
-	--[[UNKNOWN
     --Bind
 	spellTable[258] = function(targetId)
-		return CalculateEnfeeblingDuration(40, targetId);
+		return CalculateEnfeeblingDuration(60, targetId);
 	end
-    ]]--
 
 	--Sleep II
 	spellTable[259] = function(targetId)

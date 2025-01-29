@@ -21,180 +21,180 @@ SOFTWARE.
 --]]
 
 local function FillSpellTable(spellTable)
-	--Banish
-	spellTable[28] = function(targetId)
-		return 15;
-	end
+	-- --Banish
+	-- spellTable[28] = function(targetId)
+	-- 	return 15;
+	-- end
 
-	--Banish II
-	spellTable[29] = function(targetId)
-		return 30;
-	end
+	-- --Banish II
+	-- spellTable[29] = function(targetId)
+	-- 	return 30;
+	-- end
 
-	--Banish III
-	spellTable[30] = function(targetId)
-		return 45;
-	end
+	-- --Banish III
+	-- spellTable[30] = function(targetId)
+	-- 	return 45;
+	-- end
 
-	--Banishga
-	spellTable[38] = function(targetId)
-		return 15;
-	end
+	-- --Banishga
+	-- spellTable[38] = function(targetId)
+	-- 	return 15;
+	-- end
 
-	--Banishga II
-	spellTable[39] = function(targetId)
-		return 30;
-	end
+	-- --Banishga II
+	-- spellTable[39] = function(targetId)
+	-- 	return 30;
+	-- end
 
-	--Flare
-	spellTable[204] = function(targetId)
-		return 10;
-	end
+	-- --Flare
+	-- spellTable[204] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Flare II
-	spellTable[205] = function(targetId)
-		return 10;
-	end
+	-- --Flare II
+	-- spellTable[205] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Freeze
-	spellTable[206] = function(targetId)
-		return 10;
-	end
+	-- --Freeze
+	-- spellTable[206] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Freeze II
-	spellTable[207] = function(targetId)
-		return 10;
-	end
+	-- --Freeze II
+	-- spellTable[207] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Tornado
-	spellTable[208] = function(targetId)
-		return 10;
-	end
+	-- --Tornado
+	-- spellTable[208] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Tornado II
-	spellTable[209] = function(targetId)
-		return 10;
-	end
+	-- --Tornado II
+	-- spellTable[209] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Quake
-	spellTable[210] = function(targetId)
-		return 10;
-	end
+	-- --Quake
+	-- spellTable[210] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Quake II
-	spellTable[211] = function(targetId)
-		return 10;
-	end
+	-- --Quake II
+	-- spellTable[211] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Burst
-	spellTable[212] = function(targetId)
-		return 10;
-	end
+	-- --Burst
+	-- spellTable[212] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Burst II
-	spellTable[213] = function(targetId)
-		return 10;
-	end
+	-- --Burst II
+	-- spellTable[213] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Flood
-	spellTable[214] = function(targetId)
-		return 10;
-	end
+	-- --Flood
+	-- spellTable[214] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Flood II
-	spellTable[215] = function(targetId)
-		return 10;
-	end
+	-- --Flood II
+	-- spellTable[215] = function(targetId)
+	-- 	return 10;
+	-- end
     
-	--Katon: Ichi
-	spellTable[320] = function(targetId)
-		return 10;
-	end
+	-- --Katon: Ichi
+	-- spellTable[320] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Katon: Ni
-	spellTable[321] = function(targetId)
-		return 10;
-	end
+	-- --Katon: Ni
+	-- spellTable[321] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Katon: San
-	spellTable[322] = function(targetId)
-		return 10;
-	end
+	-- --Katon: San
+	-- spellTable[322] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Hyoton: Ichi
-	spellTable[323] = function(targetId)
-		return 10;
-	end
+	-- --Hyoton: Ichi
+	-- spellTable[323] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Hyoton: Ni
-	spellTable[324] = function(targetId)
-		return 10;
-	end
+	-- --Hyoton: Ni
+	-- spellTable[324] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Hyoton: San
-	spellTable[325] = function(targetId)
-		return 10;
-	end
+	-- --Hyoton: San
+	-- spellTable[325] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Huton: Ichi
-	spellTable[326] = function(targetId)
-		return 10;
-	end
+	-- --Huton: Ichi
+	-- spellTable[326] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Huton: Ni
-	spellTable[327] = function(targetId)
-		return 10;
-	end
+	-- --Huton: Ni
+	-- spellTable[327] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Huton: San
-	spellTable[328] = function(targetId)
-		return 10;
-	end
+	-- --Huton: San
+	-- spellTable[328] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Doton: Ichi
-	spellTable[329] = function(targetId)
-		return 10;
-	end
+	-- --Doton: Ichi
+	-- spellTable[329] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Doton: Ni
-	spellTable[330] = function(targetId)
-		return 10;
-	end
+	-- --Doton: Ni
+	-- spellTable[330] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Doton: San
-	spellTable[331] = function(targetId)
-		return 10;
-	end
+	-- --Doton: San
+	-- spellTable[331] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Raiton: Ichi
-	spellTable[332] = function(targetId)
-		return 10;
-	end
+	-- --Raiton: Ichi
+	-- spellTable[332] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Raiton: Ni
-	spellTable[333] = function(targetId)
-		return 10;
-	end
+	-- --Raiton: Ni
+	-- spellTable[333] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Raiton: San
-	spellTable[334] = function(targetId)
-		return 10;
-	end
+	-- --Raiton: San
+	-- spellTable[334] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Suiton: Ichi
-	spellTable[335] = function(targetId)
-		return 10;
-	end
+	-- --Suiton: Ichi
+	-- spellTable[335] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Suiton: Ni
-	spellTable[336] = function(targetId)
-		return 10;
-	end
+	-- --Suiton: Ni
+	-- spellTable[336] = function(targetId)
+	-- 	return 10;
+	-- end
 
-	--Suiton: San
-	spellTable[337] = function(targetId)
-		return 10;
-	end
+	-- --Suiton: San
+	-- spellTable[337] = function(targetId)
+	-- 	return 10;
+	-- end
 end
 
 return FillSpellTable;
